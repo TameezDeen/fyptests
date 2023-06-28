@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #655990;
+  } 
+
+.container {
+    position: relative;
+    width: 70vw;
+    height: 80vh;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    /* Confusing shit*/
+    overflow: hidden;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #3B2C72;
+  z-index: 6; 
+  /* Confusing shit*/
+  left: -50%;
+  transform: translateX(100%);
+  transition: 1s ease-in-out;
+}
+
+.login-signup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 5; 
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 40%;
+  min-width: 238px;
+  padding: 0 10px;
+}
+
+form.login-form {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+  transition-delay: 1s;
+}
+
+form.signup-form {
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  transition-delay: 1s;
+}
+
+.title{
+  color: black;
+  letter-spacing: 1px;
+  font-size: var(--h1-font-size);
+  margin-bottom: var(--mb-0-75);
+}
+
+.input-field{
+  width: 75%;
+  height: 50px;
+  background-color: #D9D9D9;
+  margin: 0.75rem;
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.input-field input {
+  flex: 5;
+  margin: 0 1rem;
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  color: black;
+}
+
+.button {
+  border-radius: 0.5rem;
+  border: 1px solid #00E4AE;
+  background: #00E4AE;
+  color: black;
+  font-size: var(--normal-font-size);
+  padding: 0.75rem 2.5rem;
+  margin-top: 0.75rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.button:hover{
+  cursor: pointer;
+  background-color: #83E8BA;
+}
+
+.panels-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.panel{
+  display: flex;
+  flex-direction: column;
+  z-index: 6;
+  align-items: center;
+  justify-content: space-around;
+  width: 35%;
+  min-width: 238px;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.left-panel {
+   pointer-events: none;
+}
+
+.content{
+   color: white;
+   transition: 1.1s ease-in-out;
+   transition-delay: 0.5s;
+}
+
+.panel h1 {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  /* font-size: var(--h1-font-size); */
+  margin-bottom: 0.75rem;
+  letter-spacing: 2px;
+}
+
+.panel p{
+  font-size: var(--h3-font-size);
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+  letter-spacing: 1px;
+
+}
+
+  /* Confusing shit*/
+.left-panel .content{
+  transform: translateX(-200%);
+}
+
+.right-panel .content{
+  transform: translateX(0);
+}
+
+/* Animation  */
+.container.sign-up-mode::before{
+  transform: translateX(0);
+}
+
+.container.sign-up-mode .right-panel  .content{
+  transform: translateX(200%);
+}
+
+.container.sign-up-mode .left-panel  .content{
+  transform: translateX(0);
+}
+
+.container.sign-up-mode form.login-form{
+  opacity: 0;
+}
+
+.container.sign-up-mode form.signup-form{
+  opacity: 1;
+}
+
+.container.sign-up-mode .right-panel {
+  pointer-events: none;
+}
+
+.container.sign-up-mode .left-panel {
+  pointer-events: all;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 992px) {
+  
+ 
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) { 
+.container{
+   width: 100vw;
+   height: 100vw;
+}
+}
+
+@media screen and (max-width: 576px) {
+
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+  
+
+}
+
+
+
+
+
+ 
+  
+
+
+
+ 
