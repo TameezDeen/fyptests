@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/fyptests/static/css/main.0f4e1a0a.css",
+    "main.js": "/fyptests/static/js/main.c36f2f13.js",
+    "index.html": "/fyptests/index.html",
+    "main.0f4e1a0a.css.map": "/fyptests/static/css/main.0f4e1a0a.css.map",
+    "main.c36f2f13.js.map": "/fyptests/static/js/main.c36f2f13.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f4e1a0a.css",
+    "static/js/main.c36f2f13.js"
+  ]
+}
