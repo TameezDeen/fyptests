@@ -238,6 +238,9 @@ form.signup-form {
   .container {
     width: 100vw;
     height: 100vh;
+    /* background-color: #655990; */
+    /* background-color: #AC92A6; */
+    background-color: #A49BC3;
   }
 }
 
