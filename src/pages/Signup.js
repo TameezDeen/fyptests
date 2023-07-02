@@ -1,8 +1,7 @@
 import React from "react";
 import "./authForm.css";
 
-
-const Signup = () => {
+const Signup = ({ isSignUpMode, toggleAuthMode }) => {
   return (
     <form action="" className="signup-form">
       <h1 className="title">Create Account</h1>
@@ -25,6 +24,12 @@ const Signup = () => {
         <input type="password" placeholder="Confirm Password" />
       </div>
       <button className="button">Signup</button>
+      <p className={`account-text ${isSignUpMode ? "show2" : ""}`}>
+        Already have an account?{" "}
+        <a href="#" id="login-btn2" onClick={toggleAuthMode}>
+          Login
+        </a>
+      </p>
     </form>
   );
 };

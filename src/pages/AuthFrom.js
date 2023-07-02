@@ -4,18 +4,7 @@ import Login from "./Login";
 import Signup from "./Signup";
 
 const AuthFrom = () => {
-  // const login_btn = document.querySelector("#login-btn");
-  // const signup_btn = document.querySelector("#signup-btn");
-  // const container = document.querySelector(".container");
-
-  // signup_btn.addEventListener("click", () => {
-  //   container.classList.add("sign-up-mode");
-  // });
-
-  // login_btn.addEventListener("click", () => {
-  //   container.classList.remove("sign-up-mode");
-  // });
-
+  
   const [isSignUpMode, setIsSignUpMode] = useState(false);
 
   const toggleAuthMode = () => {
@@ -27,10 +16,10 @@ const AuthFrom = () => {
     <div className={`container ${isSignUpMode? "sign-up-mode" : "login-in-mode"}`}>
       <div className="login-signup">
         {/* =============== LOGIN FORM =============== */}
-        <Login />
+        <Login isSignUpMode={isSignUpMode} toggleAuthMode={toggleAuthMode}/>
 
         {/* =============== SIGNUP FORM =============== */}
-        <Signup />
+        <Signup isSignUpMode={isSignUpMode} toggleAuthMode={toggleAuthMode}/>
       </div>
 
       <div className="panels-container">
