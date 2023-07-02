@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/fyptests/static/css/main.c29a6609.css",
+    "main.css": "/fyptests/static/css/main.44087cb1.css",
     "main.js": "/fyptests/static/js/main.7b0feb12.js",
     "index.html": "/fyptests/index.html",
-    "main.c29a6609.css.map": "/fyptests/static/css/main.c29a6609.css.map",
+    "main.44087cb1.css.map": "/fyptests/static/css/main.44087cb1.css.map",
     "main.7b0feb12.js.map": "/fyptests/static/js/main.7b0feb12.js.map"
   },
   "entrypoints": [
-    "static/css/main.c29a6609.css",
+    "static/css/main.44087cb1.css",
     "static/js/main.7b0feb12.js"
   ]
 }
